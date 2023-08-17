@@ -2,7 +2,7 @@
 * IWASAKI Kai
 
 ## Overview
-* Newton's method and Square root of "n" in C++
+* Newton's method and Square root of n in C++
 * C++によるニュートン法の実装と平方根(√n)の計算
 
 ## Description
