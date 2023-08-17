@@ -38,36 +38,3 @@ int main(void){
 			newton()<<endl; //求まった近似値を出力
     return 0;
 }
-
-
-
-//ChatGPT
-#include <iostream>
-#include <cmath>
-
-double newtonSqrt(double n, double initialGuess, double tolerance) {
-    double x = initialGuess;  // 初期推定値
-    double prevX = x;
-    
-    do {
-        prevX = x;
-        x = 0.5 * (x + n / x);  // ニュートン法の更新式
-    } while (std::abs(x - prevX) > tolerance);  // 収束判定
-    
-    return x;
-}
-
-int main() {
-    double n, initialGuess, tolerance;
-    std::cout << "nを入力してください: ";
-    std::cin >> n;
-    std::cout << "初期値を入力してください: ";
-    std::cin >> initialGuess;
-    std::cout << "誤差の許容上限を入力してください: ";
-    std::cin >> tolerance;
-    
-    double sqrtN = newtonSqrt(n, initialGuess, tolerance);
-    std::cout << "ルート" << n << "の近似値: " << sqrtN << std::endl;
-    
-    return 0;
-}
